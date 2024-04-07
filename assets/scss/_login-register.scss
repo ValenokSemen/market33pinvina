@@ -1,0 +1,213 @@
+.forgot-password-title, 
+.new-password-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    h3{
+        font-size: 25px;
+        color: $theme-color;
+    }
+}
+
+.login-register-tab-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+
+    button {
+        position: relative;
+        font-size: 25px;
+        font-weight: 500;
+        margin-right: 20px;
+        padding-right: 20px;
+        text-transform: capitalize;
+        transition: all 0.3s ease 0s;
+
+        &::before {
+            content: "";
+            height: 18px;
+            position: absolute;
+            width: 1px;
+            right: 0;
+            background-color: #454545;
+            margin: 0 auto;
+            bottom: 3px;
+
+        }
+
+        &:last-child {
+            margin-right: 0;
+            padding-right: 0;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &.active {
+            color: $theme-color;
+        }
+
+    }
+}
+
+.login-form,
+.register-form,
+.forgot-password-form,
+.new-password-form {
+    padding: 80px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+
+.login-form,
+.register-form,
+.forgot-password-form,
+.new-password-form,
+.address-change-form, .profile-form {
+
+    .bjhGPG {
+        align-items: center;
+        display: flex;
+        gap: .5rem;
+        justify-content: center;
+        min-height: 1.25rem;
+        position: relative;
+        transition: transform .2s ease 0s,opacity .2s ease 0s;
+        z-index: 10;
+        &.loading {
+            opacity:0;
+            transform:translateY(12px) scale(.75)
+        }
+    }
+
+    .jjoFVh {
+        display:block;
+        height:var(--icon-size);
+        left:50%;
+        margin:-10px 0 0 -10px;
+        opacity:0;
+        position:absolute;
+        top:50%;
+        transform:translateY(-12px) scale(.75);
+        transition:transform .2s ease 0s,opacity .2s ease 0s;
+        width:var(--icon-size);
+        &.loading{
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    .faEWLr {
+        animation: rotate 1s linear 0s infinite normal none running;
+        transform-origin: 50% 50%
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0)
+        }
+
+        to {
+            transform: rotate(1turn)
+        }
+    }
+
+    .VFMrX {
+        stroke-dasharray: 38px;
+        stroke-dashoffset: 114px;
+        animation: offset 2s linear 0s infinite normal none running
+    }
+
+    @keyframes offset {
+        50% {
+            stroke-dashoffset: 96px
+        }
+    }
+
+    @media #{$lg-layout} {
+        padding: 80px 50px;
+    }
+
+    @media #{$xs-layout} {
+        padding: 40px 15px;
+    }
+
+    form {
+        input {
+            background-color: transparent;
+            border: 1px solid #ebebeb;
+            color: $dark;
+            font-size: 14px;
+            height: 45px;
+            // margin-bottom: 30px;
+            padding: 0 15px;
+        }
+
+        input[type="checkbox"] {
+            height: 15px;
+            margin: 0;
+            position: relative;
+            top: 1px;
+            width: 17px;
+        }
+
+        .button-box {
+            .login-toggle-btn {
+                padding: 10px 0 19px;
+
+                label {
+                    color: #242424;
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+
+                a {
+                    color: #242424;
+                    float: right;
+                    font-size: 15px;
+                    transition: all 0.3s ease 0s;
+
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+
+            button {
+                background-color: #f2f2f2;
+                border: medium none;
+                color: $dark;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 1;
+                padding: 11px 30px;
+                text-transform: uppercase;
+                transition: all 0.3s ease 0s;
+                text-align: center;
+                position: relative;
+
+                &:hover {
+                    background-color: $theme-color;
+                    color: $white;
+                }
+
+                & svg{
+                        --icon-color: currentColor;
+                        --icon-size: 20px;
+                        flex: 0 0 20px;
+                }
+            }
+        }
+    }
+}
+
+.profile-form {
+    svg{
+        --icon-color: currentColor;
+        --icon-size: 20px;
+        flex: 0 0 20px;
+    }
+}
+    

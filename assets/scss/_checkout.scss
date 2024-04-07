@@ -1,0 +1,158 @@
+.info-detail {
+    h3 {
+        font-size: 20px;
+        color: $black;
+        margin: 0 0 20px;
+    }
+
+    .contact-info{
+        label {
+            color: $black;
+            margin: 0 0 7px;
+        }
+
+        input {
+            background: transparent none repeat scroll 0 0;
+            border: 1px solid #e6e6e6;
+            color: $dark;
+            font-size: 14px;
+            padding-left: 20px;
+            padding-right: 10px;
+
+            &.contact-address {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .contact-select {
+        select {
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            border: 1px solid #e6e6e6;
+            color: $dark;
+            font-size: 14px;
+            height: 45px;
+            padding: 2px 20px;
+            background: rgba(0, 0, 0, 0) url("/img/select.png") no-repeat scroll right 18px center;
+            cursor: pointer;
+        }
+    }
+    .additional-info-wrapper {
+        h4 {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .additional-info {
+            label {
+                color: $dark;
+                font-size: 14px;
+                margin: 0 0 7px;
+            }
+            textarea {
+                background: transparent none repeat scroll 0 0;
+                border: 1px solid #e6e6e6;
+                color: $dark;
+                font-size: 14px;
+                height: 138px;
+                padding: 17px 20px;
+            }
+        }
+    }
+}
+
+.order-detail{
+    @media #{$md-layout} {
+        margin-top: 30px;
+    }
+    @media #{$xs-layout} {
+        margin-top: 30px;
+    }
+    h3 {
+        font-size: 20px;
+        font-weight: 500;
+        margin: 0 0 20px;
+        color: $black;
+    }
+    .order-wrap{
+        padding: 38px 45px 44px;
+        background: #f6f6f6;
+        @media #{$lg-layout} {
+            padding: 30px 20px 36px;
+        }
+        @media #{$xs-layout} {
+            padding: 30px 20px 36px;
+        }
+        .order-top {
+            ul {
+                display: flex;
+                justify-content: space-between;
+                li {
+                    font-size: 16px;
+                    font-weight: 500;
+                    list-style: outside none none;
+                }
+            }
+        }
+        .order-middle {
+            border-bottom: 1px solid #dee0e4;
+            border-top: 1px solid #dee0e4;
+            margin: 29px 0 0;
+            padding: 19px 0 18px;
+            ul {
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0 0 10px;
+                    .order-price {
+                        &::after {
+                            content: ' \20BD';
+                        }
+                    }
+                }
+            }
+        }
+        .order-total {
+            border-bottom: 1px solid #dee0e4;
+            margin: 0 0 33px;
+            padding: 17px 0 19px;
+            ul {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                li.li-order-total {
+                    font-weight: 500;
+                    color: #212121;
+                    font-size: 18px;
+                }
+                li {
+                    font-weight: 500;
+                    color: $theme-color;
+                    font-size: 16px;
+                    list-style: outside none none;
+                    &:last-child{
+                        &::after {
+                            content: ' \20BD';
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .place-order > button {
+        background-color: $theme-color;
+        color: $white;
+        display: block;
+        font-weight: 500;
+        letter-spacing: 1px;
+        line-height: 1;
+        padding: 18px 20px;
+        text-align: center;
+        text-transform: uppercase;
+        border-radius: 50px;
+        z-index: 9;
+        width: 100%;
+        &:hover {
+            background-color: $dark;
+        }
+    }
+}

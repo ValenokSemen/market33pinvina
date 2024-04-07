@@ -1,0 +1,236 @@
+.sidebar-shop {
+    @media #{$lg-layout}{
+        &.mr-30 {
+            margin-right: 0;
+        }
+    }
+    @media #{$md-layout, $xs-layout}{
+        &.mr-30 {
+            margin-right: 0;
+        }
+        margin-top: 30px;
+    }
+    @media #{$lg-layout}{
+        &.ml-30 {
+            margin-left: 0;
+        }
+    }
+    @media #{$md-layout, $xs-layout}{
+        &.ml-30 {
+            margin-left: 0;
+        }
+        margin-top: 55px;
+    }
+}
+
+
+.range-slider-area{
+    .vue-slider {
+        margin-top: 5px;
+    }
+    .price-amount{
+        display: flex;
+        justify-content: space-between;
+        span {
+            display: inline-block;
+            color: $dark;
+            font-size: 14px;
+            font-weight: 500;
+            &::after {
+                content: ' \20BD';
+            }
+        }
+    }
+}
+
+.sidebar-widget {
+    h4.sidebar-title {
+        font-size: 18px;
+        font-weight: 500;
+        color: $dark;
+        margin: 0;
+    }
+    .sidebar-list {
+        .sidebar-list-item {
+            display: flex;
+            position: relative;
+            align-items: center;
+            margin-bottom: 10px;
+            .custom-control-input {
+                position: absolute;
+                z-index: -1;
+                opacity: 0;
+                & + label{
+                    display: inline-flex;
+                    align-items: center;
+                    user-select: none;
+                    span{
+                        display: inline-block;
+                        &::first-letter {
+                            text-transform: uppercase;
+                        }
+                    }
+                    &::before {
+                        content: '';
+                        display: inline-block;
+                        width: 15px;
+                        height: 15px;
+                        flex-shrink: 0;
+                        flex-grow: 0;
+                        border: 2px solid #93999f;
+                        border-radius: 0.25em;
+                        margin-right: 1em;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        background-size: 50% 50%;
+                    }
+                }
+                &:checked{
+                    & + label{
+                      &:before{
+                        background-color: $theme-color;
+                        border-color: $theme-color;
+                        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+                        background-size: 9px;
+                      }
+                    }
+                }
+                /* стили при наведении курсора на checkbox */
+                &:not(:checked){
+                    & + label{
+                        &:hover{
+                            &:before {
+                                border-color: #b3d7ff;
+                }}}}
+                /* стили для активного состояния чекбокса (при нажатии на него) */
+                &:active {
+                    & + label {
+                        &:before {
+                            background-color: #b3d7ff;
+                            border-color: #b3d7ff;
+                }}}
+                /* стили для чекбокса, находящегося в фокусе */
+                &:focus{
+                    & + label{
+                        &:before {
+                            box-shadow: 0 0 0 0.2rem rgba(131, 240, 209, 0.25);
+                }}}
+                /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+                &:focus {
+                    &:not(:checked) {
+                        & + label {
+                            &:before {
+                                border-color: #80bdff;
+                }}}}
+                /* стили для чекбокса, находящегося в состоянии disabled */
+                &:disabled{
+                    & + label{
+                        &:before {
+                            background-color: #e9ecef;
+                        }
+                    }
+                }
+            }
+            a {
+                position: relative;
+                display: flex;
+                width: 100%;
+                padding-left: 30px;
+                margin-left: 0;
+                text-transform: capitalize;
+                align-items: center;
+                &:hover,
+                &.nuxt-link-exact-active {
+                    .check-mark {
+                        border-color: $theme-color;
+                        background-color: $theme-color;
+                    }
+                }
+            }
+            .check-mark {
+                position: absolute;
+                left: 0;
+                width: 15px;
+                height: 15px;
+                border: 2px solid #888;
+                border-radius: 3px;
+                background-color: #fff;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    top: -1px;
+                    left: 3px;
+                    width: 6px;
+                    height: 11px;
+                    border: solid #fff;
+                    border-width: 0 3px 3px 0;
+                    transform: rotate(45deg);
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        a {
+            margin-left: 30px;
+            display: block;
+            span {
+                color: #9a9a9a;
+                font-weight: 500;
+                background-color: #eeeeee;
+                width: 30px;
+                height: 20px;
+                text-align: center;
+                line-height: 20px;
+                border-radius: 50px;
+                float: right;
+                transition: all .3s ease 0s;
+            }
+            &:hover span {
+                color: $white;
+                background-color: $theme-color;
+            }
+        }
+    }
+    .sidebar-tag {
+        li {
+            display: inline-block;
+            margin: 0 10px 15px 0;
+            @media #{$lg-layout}{
+                margin: 0 5px 15px 0;
+            }
+            a {
+                color: #424242;
+                display: inline-block;
+                background-color: #f6f6f6;
+                padding: 9px 17px 12px;
+                text-transform: capitalize;
+                line-height: 1;
+                border-radius: 50px;
+                @media #{$lg-layout}{
+                    padding: 9px 13px 12px;
+                }
+                &:hover,
+                &.nuxt-link-exact-active {
+                    background-color: $theme-color;
+                    color: $white;
+                }
+            }
+        }
+    }
+    button {
+        border: none;
+        background-color: #404040;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: capitalize;
+        line-height: 1;
+        padding: 15px 45px;
+        // margin-top: 38px;
+        &:hover {
+            background-color: $theme-color;
+        }
+    }
+}

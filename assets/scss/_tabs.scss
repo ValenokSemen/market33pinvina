@@ -1,0 +1,371 @@
+
+.tab-vertical {
+    display: flex;
+
+    .nav-tabs {
+        flex-flow: column nowrap;
+        border: 0;
+        border-right: 2px solid #ebebeb;
+    }
+
+    .nav-item {
+        margin-right: 0;
+    }
+
+    .nav-link {
+        position: relative;
+        margin-right: -2px;
+        padding-left: 2rem;
+        width: calc(100% + 2px);
+        border: 0;
+        text-align: left;
+    }
+
+    .tab-content {
+        flex: 1;
+        position: relative;
+
+        > .tab-pane {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            height: 0 !important;
+            opacity: 0;
+            z-index: -1;
+            transition: visibility .3s,opacity .3s;
+        }
+
+        >.active {
+            position: relative;
+            height: auto !important;
+            opacity: 1;
+            z-index: auto;
+        }
+    }
+}
+
+.dashboard-area {
+    .nav-tabs {
+        border-right: none;
+    }
+
+    .tab-pane {
+        padding: 1.3rem 0 0;
+
+    }
+
+    .tab-content {
+
+        form {
+            .billing-info {
+                margin-bottom: 1.5rem;
+            }
+
+            fieldset {
+                margin-top: 20px;
+            }
+
+            legend {
+                margin-bottom: 20px;
+            }
+        }
+        #home {
+            p{
+                color: #777;
+                font-size: 14px;
+                text-transform: capitalize;
+                span {
+                    color: #010101;
+                }
+                .link-to-tab {
+                    text-decoration: underline;
+                    color: #010101 !important;
+                }
+            }
+        }
+
+        label {
+            display: block;
+            padding-left: .2rem;
+            color: $black;
+            margin-bottom: 0.5rem;
+            font-size: 14px;
+            line-height: 1;
+        }
+
+        .billing-info {
+            background: transparent none repeat scroll 0 0;
+            transition: background-color .3s,border-color .3s;
+            color: $black;
+            padding: 0 15px;
+            min-height: 1.5rem;
+            line-height: 1.5;
+            border-radius: 0;
+            border: 1px solid #ebebeb;
+        }
+
+        .billing-back-btn {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            align-items: center;
+
+            .billing-back {
+                a {
+                    color: $black;
+                    display: inline-block;
+                    font-size: 14px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        color: $theme-color;
+                    }
+
+                    i {
+                        font-size: 16px;
+                        color: $theme-color;
+                    }
+                }
+            }
+
+            .billing-btn {
+                button {
+                    border: medium none;
+                    background-color: #e1e1e1;
+                    color: $black;
+                    display: inline-block;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 1;
+                    padding: 15px 35px;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    transition: all .3s ease 0s;
+                    position: relative;
+                    &:hover {
+                        background-color: $theme-color;
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        .order-accaunt {
+            margin-bottom: 20px;
+            border: 1px solid #ebebeb;
+
+            h3.panel-title {
+                background-color: #f9f9f9;
+                border-bottom: 1px solid #ebebeb;
+                color: $black;
+                font-size: 15px;
+                font-weight: 500;
+                margin: 0;
+                position: relative;
+                text-transform: uppercase;
+                @media #{$xs-layout}{
+                    line-height: 22px;
+                    font-size: 14px;
+                }
+                span {
+                    color: $paragraph;
+                    font-size: 12px;
+                    left: 20px;
+                    position: absolute;
+                    top: 18px;
+                }
+                a {
+                    color: #242424;
+                    display: block;
+                    padding: 16px 110px;
+                    position: relative;
+                    @media #{$md-layout}{
+                        padding-right: 30px;
+                    }
+                    @media #{$xs-layout}{
+                        padding: 16px 30px 16px 110px;
+                    }
+                    &:hover {
+                        color: $theme-color;
+                    }
+                    &::before {
+                        color: $black;
+                        content: "\f107";
+                        display: inline-block;
+                        font-family: "FontAwesome";
+                        font-size: 16px;
+                        position: absolute;
+                        right: 10px;
+                        top: 15px;
+                    }
+                    &:hover::before {
+                        color: $theme-color;
+                    }
+                }
+            }
+
+            .panel-body{
+                padding: 30px 20px;
+                .item-status {
+                    span {
+                        display: inline-block;
+                        padding: .1rem .5rem;
+                        border-radius: .3rem;
+                        line-height: 1.9;
+                        
+                        &.hold {
+                            background-color: #ccc;
+                        }
+                        
+                        &.complete{
+                            background-color: $green;
+                        }
+                    }
+                }
+            }
+
+            table{
+                tfoot{
+                    tr {
+                        td {
+                            border: none;
+                            padding-bottom: 0;
+                            padding-right: 63px;
+                            text-align: right;
+                            h2 {
+                                font-size: 20px;
+                                margin-bottom: 0;
+                            }
+                        }
+                        td:first-child {
+                            font-size: 15px;
+                            font-weight: 700;
+                            padding-right: 10px;
+                            text-transform: capitalize;
+                            width: 85%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .accaunt-address-wrapper{
+            .accaunt-address-title{
+                border-bottom: 1px solid #eaeaea;
+                margin-bottom: 28px;
+                padding-bottom: 30px;
+            }
+
+            .entries-wrapper{
+                position: relative;
+                @media #{$xs-layout}{
+                    padding: 30px 10px;
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                .entries-info{
+                    padding: 30px 20px;
+                    @media #{$xs-layout}{
+                        padding: 0 10px 30px;
+                    }
+                    @media #{$md-layout}{
+                        padding: 30px 0;
+                    }
+                    p{
+                        color: #000;
+                        font-size: 15px;
+                        margin: 0;
+                        text-transform: capitalize;
+                    }
+                }
+                &::before {
+                    position: absolute;
+                    content: "";
+                    height: 100%;
+                    width: 1px;
+                    left: 50%;
+                    top: 0;
+                    background-color: #eaeaea;
+                }
+
+                .entries-edit-delete{
+                    button {
+                        background-color: #000;
+                        color: #fff;
+                        display: inline-block;
+                        line-height: 1;
+                        margin: 0 2px;
+                        padding: 12px 15px;
+                        text-transform: uppercase;
+                        font-weight: 500;
+
+                        &.edit{
+                            background-color: #df5c39;
+                            @media #{$md-layout}{
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        &:hover {
+                            background-color: $theme-color;
+                        }
+                    }
+                }
+            }
+            .null-wrraper{
+                .entries-edit-delete{
+                    button {
+                        background-color: #000;
+                        color: #fff;
+                        display: inline-block;
+                        line-height: 1;
+                        margin: 0 2px;
+                        padding: 12px 15px;
+                        text-transform: uppercase;
+                        font-weight: 500;
+
+                        &:hover {
+                            background-color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-item {
+        border-bottom: 1px solid #eee;
+        color: #010101;
+        font-size: 16px;
+
+        &.show {
+            .nav-link {
+                color: #010101;
+            }
+        }
+        .nav-link {
+            color: #010101;
+            &.active {
+                color: $theme-color;
+            }
+        }
+        a {
+            display: block;
+            padding: 1.7rem .8rem 1.6rem;
+            margin: 0;
+            font-weight: 600;
+            letter-spacing: -.015em;
+            line-height: 1;
+            text-transform: none;
+        }
+    }
+}
+.gutter-lg > * {
+        margin-left: 15px;
+        margin-right: 15px;
+}

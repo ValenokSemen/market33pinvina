@@ -1,0 +1,107 @@
+.footer-area {
+    position: relative;
+}
+
+.copyright {
+    .footer-logo {
+        margin-bottom: 15px;
+        margin-top: 0px;
+        img {
+            width: 179px;
+        }
+        // @media #{$xs-layout, $md-layout}{
+        //     margin-top: 0px;
+        // }
+        // @media #{$lg-layout}{
+        //     margin-top: 28px;
+        // }
+    }
+    p {
+        color: $dark;
+        letter-spacing: .7px;
+        margin-bottom: 3px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.footer-widget {
+    .footer-title {
+        h3{
+            font-size: 16px;
+            font-weight: 500;
+            color: $dark;
+            margin: 0 0 16px;
+            line-height: 1;
+        }
+    }
+    .footer-list {
+        ul {
+            li{
+                margin: 0 0 11px;
+                &:last-child {
+                   margin: 0 0 0px; 
+                }
+                a {
+                    color: #5d5d5d;
+                    letter-spacing: .3px;
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+    @media #{$xx-layout}{
+        &.ml-95 {
+            margin-left: 20px;
+        }
+        &.ml-145 {
+            margin-left: 50px;
+        }
+	}
+    @media #{$xl-layout}{
+        &.ml-95, &.ml-30 {
+            margin-left: 0px;
+        }
+        &.ml-145 {
+            margin-left: 20px;
+        }
+        &.ml-ntv5 {
+            margin-left: -50px;
+        }
+	}
+    @media #{$lg-layout, $md-layout, $xs-layout}{
+        &.ml-95, &.ml-145, &.ml-30, .ml-ntv5 {
+            margin-left: 0px;
+        }
+	}
+}
+
+.footer-social {
+    align-items: center;
+    display: flex;
+    margin-top: 37px;
+    li {
+        padding-right: 45px;
+        display: inline-block;
+        a {
+            color: #000;
+            font-size: 20px;
+            transition: all .5s ease 0s;
+            &:hover {
+                color: $theme-color !important;
+                transition: .5s ease;
+            }
+        }
+    }
+    @media #{$md-layout }{
+        margin-top: 15px;
+    }
+    @media #{$xs-layout }{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+}

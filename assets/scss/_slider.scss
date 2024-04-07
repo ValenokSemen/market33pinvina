@@ -1,0 +1,222 @@
+.slider-area {
+    position: relative;
+}
+
+.product-carousel-nav-center {
+    .product-relative-carousel-nav {
+        font-size:40px;
+        color:#fff;
+        width:44px;
+        transition:.4s;
+        opacity:0;
+        visibility:hidden;
+        background-color:rgba(0,0,0,.2);
+        &:hover {
+            background-color: $theme-color;
+        }
+    }
+    &:hover {
+        .product-relative-carousel-nav {
+            opacity:1;
+            visibility:visible
+        }
+    }
+}
+
+
+
+.slider-area {
+    &.ml-10{
+        margin-left: 0;
+    }
+    @media #{$xl-layout}{
+        &.ml-70 {
+            margin-left: 15px;
+        }
+        &.mr-70 {
+            margin-right: 15px;
+        }
+    }
+    @media #{$lg-layout}{
+        &.ml-70 {
+            margin-left: 30px;
+        }
+        &.mr-70 {
+            margin-right: 30px;
+        }
+    }
+    @media #{$md-layout}{
+        &.ml-70 {
+            margin-left: 40px;
+        }
+        &.mr-70 {
+            margin-right: 40px;
+        }
+    }
+    @media #{$xs-layout}{
+        &.ml-70 {
+            margin-left: 15px;
+        }
+        &.mr-70 {
+            margin-right: 15px;
+        }
+    }
+}
+
+.slider-height-2 {
+    height: 800px;
+    @media #{$xl-layout}{
+		height: 570px;
+	}
+    @media #{$lg-layout, $md-layout}{
+		height: 500px;
+	}
+    @media #{$xs-layout}{
+		height: 400px;
+	}
+    &.slider-content-center {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.nav-style-1 {
+    .main-slider-nav {
+        left: 80px;
+        z-index: 9;
+        color: #cb5757;
+        font-size: 80px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.4s;
+        // res
+        @media #{$xl-layout, $lg-layout, $md-layout, $xs-layout} {
+            left: 15px;
+        }
+        &.swiper-button-next {
+            right: 80px;
+            left: auto;
+            // res
+            @media #{$xl-layout, $lg-layout, $md-layout, $xs-layout} {
+                right: 15px;
+            }
+        }
+        &:hover {
+            color: $theme-color;
+        }
+    }
+    &:hover {
+        .main-slider-nav {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.single-slider-2 {
+    @media #{$xl-layout}{
+		background-position: 50%;
+	}
+    @media #{$lg-layout}{
+		background-position: 42%;
+	}
+    @media #{$xs-layout}{
+		background-position: 30%;
+        &.valentine-slider-bg {
+            background-color: 75%;
+        }
+	}
+    @media #{$sm-layout}{
+		background-position: 22%;
+	}
+}
+
+.single-slider-2 {
+    position: relative;
+    @media #{$xs-layout} {
+        &:before {
+            top: 0;
+            left: 0;
+            content: '';
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-color: rgba($white, 0.5);
+        }
+    }
+}
+
+.slider-content-7 {
+    position: relative;
+    z-index: 9;
+    h3 {
+        font-size: 20px;
+        color: #ffffff;
+        margin: 0;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+    h1 {
+        font-size: 70px;
+        color: #ffffff;
+        margin: 0px 0 40px;
+        line-height: 90px;
+        font-weight: 300;
+        @media #{$xl-layout}{
+            font-size: 50px;
+            margin: 10px 0 20px;
+            line-height: 60px;
+        }
+        @media #{$lg-layout}{
+            font-size: 43px;
+            margin: 10px 0 20px;
+            line-height: 55px;
+        }
+        @media #{$md-layout}{
+            font-size: 40px;
+            margin: 10px 0 20px;
+            line-height: 50px;
+        }
+        @media #{$xs-layout}{
+            font-size: 32px;
+            margin: 8px 0 30px;
+            line-height: 38px;
+        }
+        @media #{$sm-layout}{
+            font-size: 30px;
+            margin: 12px 0 30px;
+            line-height: 46px;
+        }
+    }
+}
+
+.slider-animation-1 {
+    & > * {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        animation-name: fadeOutUp;
+    }
+}
+
+.slider-btn-round {
+    a {
+        color: $black;
+        font-size: 16px;
+        display: inline-block;
+        border: 1px solid $black;
+        border-radius: 10px;
+        line-height: 1;
+        padding: 16px 40px;
+        overflow: hidden;
+        @media #{$xs-layout}{
+            padding: 12px 30px;
+            font-size: 14px;
+        }
+    }
+    &.slider-btn-round-white {
+        a {
+            color: $white;
+            border: 1px solid$white;
+        }
+    }
+}

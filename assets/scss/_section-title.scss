@@ -1,0 +1,104 @@
+/*------- 5. Section title style  -------*/
+
+.section-title{
+    @media #{$xs-layout}{
+        &.mb-50 {
+            margin-bottom: 30px;
+        }
+    }
+    h2{
+        font-size: 35px;
+        font-weight: 600;
+        position: relative;
+        display: inline-block;
+        @media #{$xs-layout}{
+            font-size:24px;
+            line-height: 30px;
+            &.mb-50 {
+                margin-bottom: 30px;
+            }
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            left: -100px;
+            background-color: $black;
+            width: 80px;
+            height: 2px;
+            top: 17px;
+            @media #{$xs-layout}{
+                left: -40px;
+                width: 30px;
+            }
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            right: -100px;
+            background-color: $black;
+            width: 80px;
+            height: 2px;
+            top: 17px;
+            @media #{$xs-layout}{
+                right: -40px;
+                width: 30px;
+            }
+        }
+    }
+    &.mb-55 {
+        @media #{$xs-layout}{
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.section-title-2 {
+    h2 {
+        color: #010101;
+        font-size: 42px;
+        margin: 0;
+        line-height: 38px;
+        border-bottom: 1px solid #d7d7d7;
+        padding-bottom: 20px;
+        @media #{$md-layout}{
+            font-size: 40px;
+        }
+        @media #{$xs-layout}{
+            font-size: 30px;
+            line-height: 27px;
+        }
+        &.white {
+            color: $white;
+        }
+    }
+    @media #{$xs-layout}{
+        &.mb-50 {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.section-title-3 {
+    h2 {
+        color: #010101;
+        font-size: 42px;
+        margin: 0;
+        line-height: 38px;
+        @media #{$md-layout}{
+            font-size: 38px;
+        }
+        @media #{$xs-layout}{
+            font-size: 30px;
+            line-height: 27px;
+        }
+        &.white {
+            color: $white;
+        }
+    }
+
+    @media #{xs-layout}{
+        &.mb-50 {
+            margin-bottom: 30px;
+        }
+    }
+}

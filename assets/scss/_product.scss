@@ -1,0 +1,205 @@
+/*------- 6. Product style  --------*/
+.product-area {
+    position: relative;
+}
+
+
+.product-tab-list {
+
+    &.pt-30,
+    &.pt-55 {
+        @media #{$xs-layout} {
+            padding: 10px 0 30px;
+        }
+    }
+
+    @media #{$xs-layout} {
+        &.pb-50 {
+            padding-bottom: 30px;
+        }
+    }
+
+    .nav-item {
+        margin: 0 11px;
+
+        @media #{$xs-layout} {
+            margin: 0 11px 5px;
+        }
+
+        button {
+            font-weight: 500;
+            font-size: 18px;
+            color: #808080;
+            padding: 0;
+            text-transform: capitalize;
+            transition: all .3s ease 0s;
+
+            &:hover,
+            &.active {
+                color: $lazur;
+            }
+        }
+    }
+}
+
+.product-wrap-2 {
+    position: relative;
+    .product-img {
+        position: relative;
+        overflow: hidden;
+        .product-label {
+            position: absolute;
+            font-size: 14px;
+            top: 10px;
+            padding: 3px 11px;
+            border-radius: 3px;
+
+            color: $white;
+            line-height: 1;
+            right: 20px;
+            &.green {
+                background-color: $theme-color;
+            }
+            &.gold {
+                background-color: #c3c00b;
+            }
+            &:nth-of-type(2) {
+                top: 35px;
+            }
+        }
+        img {
+            width: 100%;
+        }
+        .hover-img {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            opacity: 0;
+            visibility: hidden;
+            transform: translate(-50%, 20px);
+            transition-duration: .7s;
+        }
+        .product-action{
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 100%;
+            z-index: 9;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            transform: translateX(-50%);
+            .product-item-action {
+                visibility: hidden;
+                opacity: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 50px;
+                transform: translateY(20px);
+                background-color: $theme-color;
+                transition: all 0.5s ease;
+                &:hover {
+                    background-color: $dark;
+                }
+                .btn {
+                    color: $white;
+                    font-size: 16px;
+                    line-height: 1;
+                    display: block;
+                    width: 100%;
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+            }
+            .cart {
+                font-size: 14px;
+                width: calc(100% - 50px);
+                transition-delay: .1s;
+            }
+            .quickview {
+                width: 50px;
+                border-left: 1px solid $white;
+                margin: 0;
+                transition-delay: .2s;
+            }
+        }
+    }
+    &:hover .hover-img {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, 0);
+    }
+    &:hover .product-action .product-item-action {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .product-content-2 {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+
+        .product-title-wrap-2 {
+            h3 {
+                margin-bottom: 5px;
+                line-height: 1;
+
+                a {
+                    color: $black;
+                    font-size: 16px;
+
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+
+            .price-2 {
+                span {
+                    font-size: 16px;
+                    color: $black;
+                    margin-right: 17px;
+                    position: relative;
+                    &::after {
+                        content: ' \20BD';
+                    }
+                    &.price {
+                        color: #8e8e8e;
+                        text-decoration: line-through;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        right: -13px;
+                        top: 10px;
+                        width: 7px;
+                        height: 2px;
+                        background-color: $black;
+
+                    }
+
+                    &:last-child::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .product-whishlist-2{
+            button {
+                font-size: 16px;
+                padding: 0;
+                color: #929292;
+                margin-top: 4px;
+                display: inline-block;
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+
+    }
+}
